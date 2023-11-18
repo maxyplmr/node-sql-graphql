@@ -1,7 +1,7 @@
-const mysql = require('mysql2/promise');
+const db = require('mysql2/promise');
 
-const pool = mysql.createPool({
-    host: 'mariadb',
+const pool = db.createPool({
+    host: 'mariadb', // Service name in Docker Compose
     user: 'username',
     password: 'userPassword',
     database: 'databaseName',
