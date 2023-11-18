@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "3000:3000"
+      - "2999:2999"
     depends_on:
       - mariadb
     volumes:
