@@ -13,6 +13,8 @@ RUN npm install
 # Copy the rest of the application code to the working directory
 COPY . .
 
+COPY tsconfig*.json ./tsconfig.json
+
 RUN npm run build
 
 # Expose the port that your application will run on
