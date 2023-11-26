@@ -1,6 +1,6 @@
-const db = require('../index');
+import db from '../index';
 
-const createUserTable = `
+const createUserTable: string = `
   CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL,
@@ -25,8 +25,10 @@ db.query(createUserTable)
     .then(([rows, fields]) => {
         console.log('User table created successfully.');
     })
-    .catch((err) => {
+    .catch((err: Error) => {
         console.error('Error creating user table:', err);
     });
 
 module.exports = db;
+
+export default db;

@@ -8,8 +8,8 @@ services:
       - "2999:2999"
     depends_on:
       - mariadb
-    volumes:
-      - .:/usr/app
+#    volumes:
+#      - .:/usr/app
 
   mariadb:
     image: mariadb
@@ -20,3 +20,8 @@ services:
       MYSQL_PASSWORD: userPassword
     ports:
       - "3306:3306"
+    volumes:
+      - mariadb_data:/var/lib/mysql
+
+volumes:
+  mariadb_data:
