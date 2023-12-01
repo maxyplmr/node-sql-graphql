@@ -3,11 +3,14 @@ services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile-dev
     ports:
       - "2999:2999"
     depends_on:
       - mariadb
+    volumes:
+      - .:/usr/app
+      - /usr/app/node_modules
 
   mariadb:
     image: mariadb
