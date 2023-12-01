@@ -1,8 +1,12 @@
 const express = require('express');
 const app = express();
-console.log("test")
+console.log(1)
+const UserTable = require("./src/db/models/user")
 
-// const a = require("./src/test")
+console.log(333)
+// console.log("test 2")
+
+const a = require("./src/test")
 // const aasd = require("./src/graphql/schemas/user")
 // console.log(aasd)
 

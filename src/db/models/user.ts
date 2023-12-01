@@ -23,7 +23,7 @@ const createUserTable: string = `
 
 db.query(createUserTable)
     .then(([rows, fields]) => {
-        console.log('User table created successfully.');
+        // console.log('User table created successfully.');
     })
     .catch((err: Error) => {
         console.error('Error creating user table:', err);
