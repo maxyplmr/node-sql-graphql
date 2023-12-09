@@ -16,14 +16,3 @@ export interface TUser {
     created_at?: string;
     updated_at?: string;
 }
-
-export interface TQueryUser {
-    getUser(id: number): TUser | null;
-    // getAllUsers: TUser[];
-}
-
-export interface TMutationUser {
-    createUser(data: TUser): TUser;
-    // updateUser(data: TUser): TUser;
-    // deleteUser(id: number): TUser | null;
-}
